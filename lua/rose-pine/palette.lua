@@ -1,6 +1,6 @@
 local options = require("rose-pine.config").options
 local variants = {
-	main = {
+	spt = {
 		_nc = "#0f0f0f", -- Adjusted for a darker background
 		base = "#121212", -- Adjusted to a dark gray for the main background
 		surface = "#1e1e1e", -- Adjusted to a slightly lighter shade for surface elements
@@ -63,4 +63,4 @@ if variants[options.variant] ~= nil then
 	return variants[options.variant]
 end
 
-return vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "main"]
+return vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "spt"]
